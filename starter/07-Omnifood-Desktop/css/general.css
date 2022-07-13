@@ -23,7 +23,7 @@ Paragraph default: 1.6
 0.75px;
 --- 02 COLOR
 Primary: #e67e22
-Tints: #fdf2e9, #fae5d3
+Tints: #fdf2e9, #fae5d3, #eb984e
 Shades:#cf711f
 Accents:
 Greys:
@@ -31,6 +31,8 @@ Greys:
 #555
 #333
 --- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
 
 --- 06 BORDER-RADIUS
 
