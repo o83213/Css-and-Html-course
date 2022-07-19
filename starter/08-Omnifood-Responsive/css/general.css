@@ -23,14 +23,18 @@ Paragraph default: 1.6
 0.75px;
 --- 02 COLOR
 Primary: #e67e22
-Tints: #fdf2e9, #fae5d3
-Shades:#cf711f
+Tints: #fdf2e9, #fae5d3, #eb984e
+Shades:#cf711f, #45260a
 Accents:
 Greys:
-#6f6f6f (lightest gray allowed)
-#555
+#888
+#767676 (lightest gray allowed on #fff)
+#6f6f6f (lightest gray allowed on #fdf2e9)
+#555 
 #333
 --- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
 
 --- 06 BORDER-RADIUS
 
@@ -48,6 +52,13 @@ Medium: 11px
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: none;
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem #e67e22;
 }
 html {
   font-size: 62.5%;
@@ -89,6 +100,9 @@ strong {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 .grid--center-v {
   align-items: center;
 }
@@ -129,6 +143,7 @@ strong {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -139,6 +154,10 @@ strong {
   border-radius: 1rem;
   /* Animation put on the original state */
   transition: all 0.3s;
+  /* For btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -161,6 +180,16 @@ strong {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fff;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 .link:link,
 .link:visited {
