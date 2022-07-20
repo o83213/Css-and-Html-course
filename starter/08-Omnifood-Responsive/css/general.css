@@ -17,6 +17,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
+large: 1.8
 
 - Letter spacing
 -0.5px
@@ -61,13 +62,19 @@ Medium: 11px
   box-shadow: 0 0 0 0.8rem #e67e22;
 }
 html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow: hidden;
 }
 strong {
   font-weight: 500;
@@ -230,6 +237,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-icon {
   width: 3rem;

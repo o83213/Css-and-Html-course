@@ -9,6 +9,7 @@
   background-color: #fdf2e9;
   padding: 0 4.8rem;
   height: 9.6rem;
+  position: relative;
 }
 
 .logo {
@@ -19,7 +20,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -47,6 +48,27 @@
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
+
+/* Mobile */
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+/*
+<ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+<ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+*/
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /*************************************/
 /* HERO SECTION */
 /*************************************/
@@ -132,7 +154,7 @@
 /*************************************/
 
 .section-how {
-  padding: 9.6rem 0;
+  padding: 9.6rem 0 0;
 }
 
 .step-number {
@@ -408,6 +430,7 @@
 }
 .cta {
   display: grid;
+  /* 0.66 : 0.33  */
   grid-template-columns: 2fr 1fr;
   overflow: hidden;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
@@ -476,7 +499,7 @@
 /* Footer seciton */
 /*************************************/
 .footer {
-  padding: 12.8rem;
+  padding: 12.8rem 0;
   border-top: 1px solid #eee;
 }
 
